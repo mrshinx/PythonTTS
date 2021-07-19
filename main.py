@@ -10,7 +10,7 @@ Assistant = "Hello, please say something"
 r = sr.Recognizer()
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[1].id)
+engine.setProperty('voice', voices[1].id)  # Change default voice to female
 
 # Begin
 print(f'Assistant: {Assistant}')
@@ -55,4 +55,5 @@ while True:
     print(f"Assistant: {Assistant}")
     engine.say(Assistant)
     engine.runAndWait()
-    if Assistant == "Goodbye": break
+    if Assistant == "Goodbye":
+        break
